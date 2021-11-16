@@ -1,4 +1,5 @@
 const uploadFile = require("../middleware/upload");
+const emailer = require("../emailer/index.js");
 var path = require('path')
 const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
 const ffmpeg = require('fluent-ffmpeg');
@@ -8,6 +9,8 @@ ffmpeg.setFfmpegPath(ffmpegPath);
 
 const upload = async (req, res) => {
     try {
+      // await emailer();
+      // return;
       await uploadFile(req, res);
  
       if (req.file == undefined) {
