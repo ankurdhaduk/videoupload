@@ -18,7 +18,7 @@ amqp.connect('amqp://localhost', function(error0, connection) {
     });
 
     channel.consume(queue, function(msg) {
-        sendMail(msg)
+        sendMail(msg.content.toString())
       }, {
           noAck: true
         });
