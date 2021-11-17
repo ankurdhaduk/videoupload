@@ -1,12 +1,12 @@
 var amqp = require('amqplib/callback_api');
-amqp.connect('amqp://localhost', function (error, connection) { });
+// amqp.connect('amqp://localhost', function (error, connection) { });
 
-amqp.connect('amqp://localhost', function (error, connection) {
-    if (error) {
-        console.log(error);
-    }
-    connection.createChannel(function (error1, channel) { });
-});
+// amqp.connect('amqp://localhost', function (error, connection) {
+//     if (error) {
+//         console.log(error);
+//     }
+//     // connection.createChannel(function (error1, channel) { });
+// });
 
 amqp.connect('amqp://localhost', function (error0, connection) {
     if (error0) {
@@ -18,7 +18,7 @@ amqp.connect('amqp://localhost', function (error0, connection) {
         }
         var queue = 'mail';
 
-        var toEmail = ["jignashakotdiya10@gmail.com"]
+        var toEmail = ["ankurdhaduk1988@gmail.com","ankurdhaduk1988+1@gmail.com","ankurdhaduk1988+2@gmail.com"]
         channel.assertQueue(queue, {
             durable: false
         });
@@ -27,6 +27,7 @@ amqp.connect('amqp://localhost', function (error0, connection) {
             console.log(" [x] Sent %s", email);
         }
 
+        
 
         //   setInterval(function() {
         //     var msg = 'Hello world'+count;
