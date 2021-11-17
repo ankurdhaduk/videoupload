@@ -23,13 +23,13 @@ const sendEmail = async (email) => {
     port: 465,
     secure: true, // use SSL
     auth: {
-      user: 'pranvbrahmbhatt009@gmail.com',
-      pass: 'pranav1920'
+      user: 'xxxx@gmail.com',
+      pass: 'xxx'
     }
   });
 
   var mailOptions = {
-    from: 'pranvbrahmbhatt009@gmail.com',
+    from: 'xxx@gmail.com',
     to: email,
     subject: 'Sending Email using Node.js',
     text: 'That was easy!'
